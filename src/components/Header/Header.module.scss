@@ -1,0 +1,33 @@
+@import "~styles/index.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  padding: 16px $grid-horizontal;
+
+  // background-color: $white;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(50px);
+
+  z-index: 100;
+
+  .title {
+    color: $primary;
+
+    font-family: $atomed;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,221 @@
+@import "~styles/index.scss";
+
+/* Главный блок */
+
+.mainBlock {
+  position: fixed;
+  top: 20%;
+  left: $grid-horizontal;
+  right: $grid-horizontal;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 80px;
+
+  font-family: $source-code-pro;
+
+  z-index: -3;
+
+  // position: relative;
+
+  .titleWraper {
+    display: flex;
+    gap: 8px;
+  }
+
+  h1 {
+    color: $black;
+
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 800;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    & > div {
+      display: flex;
+      gap: 16px;
+      align-items: flex-end;
+    }
+  }
+
+  .animation {
+    height: 96px;
+
+    overflow: hidden;
+
+    color: $white;
+    font-size: 72px;
+    line-height: 100%;
+    align-self: center;
+
+    & > div > div {
+      padding: 0.75rem 0.75rem 0 0.75rem;
+      height: 6rem;
+      margin-bottom: 4rem;
+      display: inline-block;
+    }
+
+    & > div > div > svg:not(:first-child) {
+      margin-left: 8px;
+    }
+
+    &:nth-of-type(1) > div:first-child {
+      animation: text-animation 9s infinite;
+    }
+
+    &:nth-of-type(2) > div:first-child {
+      animation: text-animation-2 9s infinite;
+    }
+
+    &:nth-of-type(1) .first > div {
+      color: $primary-main;
+    }
+    &:nth-of-type(1) .second > div {
+      color: $secondary-main;
+    }
+    &:nth-of-type(1) .third > div {
+      color: $info-main;
+    }
+
+    &:nth-of-type(2) .first > div {
+      background-color: $info-main;
+      color: #fff;
+    }
+    &:nth-of-type(2) .second > div {
+      background-color: $secondary-main;
+      color: #fff;
+    }
+    &:nth-of-type(2) .third > div {
+      background-color: $primary-main;
+      color: #fff;
+    }
+
+    @keyframes text-animation {
+      0% {
+        margin-top: 0;
+      }
+      10% {
+        margin-top: 0;
+      }
+      20% {
+        margin-top: -10rem;
+      }
+      30% {
+        margin-top: -10rem;
+      }
+      40% {
+        margin-top: -20rem;
+      }
+      60% {
+        margin-top: -20rem;
+      }
+      70% {
+        margin-top: -10rem;
+      }
+      80% {
+        margin-top: -10rem;
+      }
+      90% {
+        margin-top: 0;
+      }
+      100% {
+        margin-top: 0;
+      }
+    }
+
+    @keyframes text-animation-2 {
+      0% {
+        margin-top: -20rem;
+      }
+      10% {
+        margin-top: -20rem;
+      }
+      20% {
+        margin-top: -10rem;
+      }
+      30% {
+        margin-top: -10rem;
+      }
+      40% {
+        margin-top: 0;
+      }
+      60% {
+        margin-top: 0;
+      }
+      70% {
+        margin-top: -10rem;
+      }
+      80% {
+        margin-top: -10rem;
+      }
+      90% {
+        margin-top: -20rem;
+      }
+      100% {
+        margin-top: -20rem;
+      }
+    }
+  }
+
+  h3 {
+    color: $secondary;
+
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    span:nth-of-type(1) {
+      color: $primary-main;
+    }
+
+    span:nth-of-type(2) {
+      color: $secondary-main;
+    }
+
+    span:nth-of-type(3) {
+      color: $info-main;
+    }
+  }
+
+  .alert {
+    position: absolute;
+    top: 200px;
+    left: 884px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .alertRow {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+  }
+
+  .alertRow > svg:nth-child(1) {
+    transform: translateY(85%);
+  }
+
+  .alertRow > svg:nth-child(2) {
+    transform: translateY(40%);
+  }
+
+  .alertRow:nth-of-type(2) {
+    margin-top: -32px;
+    padding-left: 96px;
+  }
+
+  .alertRow:nth-of-type(2) > svg:nth-of-type(1) {
+    transform: translateY(70%);
+  }
+
+  .alertRow:nth-of-type(2) > svg:nth-of-type(4) {
+    transform: translateY(-40%);
+  }
+}

@@ -1,0 +1,126 @@
+@import "~styles/index.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0 $grid-horizontal;
+  padding-top: 80vh;
+
+  background-color: $white;
+}
+
+body > * {
+  min-width: $grid-item;
+  width: 100%;
+}
+
+svg,
+path {
+  transition: fill 0.3s, stroke 0.3s;
+}
+
+svg {
+  // анимации
+  &.React {
+    animation: rotating 2s linear infinite;
+    animation-play-state: paused;
+  }
+
+  &.React:hover {
+    animation-play-state: running;
+  }
+
+  &.Typescript {
+    polygon,
+    path {
+      transition: transform 0.4s linear;
+      transform: scale(1);
+      transform-origin: 100% 100%;
+    }
+  }
+
+  &.Typescript:hover {
+    polygon,
+    path {
+      transform: scale(1.2);
+    }
+  }
+
+  &.Adobe {
+    path:nth-of-type(3),
+    path:nth-of-type(4) {
+      transition: transform 0.4s linear;
+      transform: scale(1);
+      transform-origin: 50% 50%;
+    }
+  }
+
+  &.Adobe:hover {
+    path:nth-of-type(3),
+    path:nth-of-type(4) {
+      transform: scale(1.2);
+    }
+  }
+
+  // ховер эффекты
+  &.VK:hover {
+    fill: #0077ff;
+  }
+
+  &.Telegram:hover {
+    fill: #29a9ea;
+  }
+
+  &.Github:hover {
+    fill: $white;
+
+    path {
+      stroke: $black;
+    }
+  }
+
+  &.HH:hover {
+    fill: $white;
+
+    path:first-of-type {
+      stroke: $black;
+      fill: $white;
+    }
+
+    path:not(:first-of-type) {
+      fill: $black;
+    }
+  }
+
+  &.Behance:hover {
+    fill: #0057ff;
+  }
+}
+
+// Анимации
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

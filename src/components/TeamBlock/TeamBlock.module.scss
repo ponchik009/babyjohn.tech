@@ -1,0 +1,71 @@
+@import "~styles/index.scss";
+
+/* Блок команды */
+.teamBlockWrapper {
+  // background-color: $white;
+
+  width: 100vw;
+  position: relative;
+
+  margin: 0 $grid-horizontal-minus;
+  padding: 0 $grid-horizontal;
+  margin-top: -64px;
+}
+
+.teamBlock {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+
+  .teamBlock__innerWrapper {
+    background-color: $white;
+
+    position: absolute;
+    top: 0;
+    left: $grid-horizontal-minus;
+
+    width: 100vw;
+
+    .bgFirst {
+      position: relative;
+      height: fit-content;
+    }
+
+    .bgSecond {
+      position: relative;
+      height: fit-content;
+    }
+  }
+
+  h3 {
+    color: $black;
+
+    font-family: $source-code-pro;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    text-align: left;
+
+    margin-top: 100px;
+
+    z-index: 90;
+  }
+
+  .personsContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
+
+    width: 100%;
+
+    z-index: 90;
+
+    > * {
+      z-index: 90;
+    }
+  }
+}

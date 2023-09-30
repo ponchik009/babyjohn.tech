@@ -1,0 +1,38 @@
+/* основные цветы */
+$primary-main: #7cdd63;
+$secondary-main: #cc509c;
+$info-main: #31b0d8;
+/* $error-main: #CC509C;
+  $warning-main: #CC509C;
+  $success-main: #CC509C; */
+
+/* цвета, которые могут меняться темой */
+$primary: #b7f8a7;
+$primary-100: #d2ffc7;
+$primary-10: #efffeb;
+$secondary: #d876ae;
+$secondary-100: #ffa1d7;
+$secondary-10: #fcd5eb;
+
+/* Темная тема */
+// $primary: #479933;
+// $primary-10: #255c17;
+// $primary-100: #337623;
+// $secondary: #ca218a;
+// $secondary-10: #790c50;
+// $secondary-100: #991b69;
+
+/* базированные цвета */
+$black: #333333;
+$white: #fff;
+
+/* сетка */
+$grid-horizontal: 16.40625vw;
+$grid-item: calc(100vw - $grid-horizontal * 2);
+$grid-horizontal-minus: -16.40625vw;
+$grid-width: 67, 1875vw;
+
+// шрифты
+$atomed: "Atomed";
+$source-code-pro: "Source Code Pro", monospace;
+$montserrat: "Montserrat", sans-serif;
