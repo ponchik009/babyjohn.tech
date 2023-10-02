@@ -6,6 +6,18 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: $base-size-large;
+
+  @media only screen and (max-width: 1200px) {
+    font-size: $base-size-medium;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: $base-size-small;
+  }
+}
+
 body {
   height: 100vh;
 

@@ -1,0 +1,20 @@
+@import "./variables.scss";
+
+@function rem($size) {
+  $remSize: $size / $base-size-large;
+  @return #{$remSize}rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  @function rem($size) {
+    $remSize: $size / $base-size-medium;
+    @return #{$remSize}rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  @function rem($size) {
+    $remSize: $size / $base-size-small;
+    @return #{$remSize}rem;
+  }
+}

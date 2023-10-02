@@ -171,4 +171,16 @@
       line-height: 143%;
     }
   }
+
+  @media screen and (max-height: 1200px) {
+    .personTop {
+      .personIcons {
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+
+      .personImage {
+        height: 260px;
+      }
+    }
+  }
 }
