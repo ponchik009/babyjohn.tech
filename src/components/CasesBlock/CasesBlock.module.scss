@@ -1,0 +1,14 @@
+@import "~styles/index.scss";
+
+.casesWrapper {
+  position: relative;
+  z-index: 110;
+
+  background-color: $white;
+
+  margin-top: 210px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 110px;
+}

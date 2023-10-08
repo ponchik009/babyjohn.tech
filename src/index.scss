@@ -86,11 +86,25 @@ svg {
 
   // ховер эффекты
   &.VK:hover {
-    fill: #0077ff;
+    path:first-of-type {
+      fill: $white;
+      stroke: $black;
+    }
+
+    path:last-of-type {
+      fill: #0077ff;
+    }
   }
 
   &.Telegram:hover {
-    fill: #29a9ea;
+    path:first-of-type {
+      fill: $white;
+      stroke: $black;
+    }
+
+    path:last-of-type {
+      fill: #29a9ea;
+    }
   }
 
   &.Github:hover {
@@ -115,7 +129,9 @@ svg {
   }
 
   &.Behance:hover {
-    fill: #0057ff;
+    path {
+      fill: #0057ff;
+    }
   }
 }
 

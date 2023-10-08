@@ -29,7 +29,7 @@ $white: #fff;
 /* сетка */
 $grid-horizontal: 16.40625vw;
 $grid-item: calc(100vw - $grid-horizontal * 2);
-$grid-horizontal-minus: -16.40625vw;
+$grid-horizontal-minus: calc(-16.40625vw - 8px);
 $grid-width: 67, 1875vw;
 
 // шрифты

@@ -1,0 +1,16 @@
+@import "~styles/index.scss";
+
+.itemTitle {
+  font-family: $source-code-pro;
+
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+
+  color: $primary;
+
+  span {
+    color: $secondary;
+  }
+}

@@ -4,6 +4,7 @@ import { Header } from "components/Header/Header";
 import { Main } from "components/Main/Main";
 import { MainBlock } from "components/MainBlock/MainBlock";
 import { TeamBlock } from "components/TeamBlock/TeamBlock";
+import { CasesBlock } from "components/CasesBlock/CasesBlock";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Main>
         <MainBlock />
         <TeamBlock />
+        <CasesBlock />
       </Main>
     </>
   );

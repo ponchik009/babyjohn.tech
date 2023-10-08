@@ -2,6 +2,7 @@ import React from "react";
 
 import styles from "./PersonInfo.module.scss";
 import classNames from "classnames";
+import { DescriptionCard } from "ui/DescriptionCard/DescriptionCard";
 
 interface IPersonInfoProps
   extends React.DetailedHTMLProps<
@@ -41,29 +42,11 @@ export const PersonInfo: React.FC<IPersonInfoProps> = ({ person }) => {
         </div>
       </div>
 
-      <div className={styles.personInfo}>
-        <div className={styles.personInfo__backdrop}>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-
-        <div className={styles.personInfo__titleWrapper}>
-          <h5 className={styles.personInfoTitle}>{person.title}</h5>
-
-          <div
-            className={classNames(styles.personIcons, styles.personInfo__icons)}
-          >
-            {person.portfolio.map((item) => (
-              <a href={item.href} target="_blank">
-                {item.icon}
-              </a>
-            ))}
-          </div>
-        </div>
-        <p className={styles.personInfoText}>{person.info}</p>
-      </div>
+      <DescriptionCard
+        titleText={person.title}
+        text={person.info}
+        icons={person.portfolio}
+      />
     </div>
   );
 };

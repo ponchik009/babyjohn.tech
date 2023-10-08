@@ -1,0 +1,31 @@
+@import "~styles/index.scss";
+
+.casesItem {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  justify-content: flex-start;
+
+  .casesItem__Top {
+    display: flex;
+    gap: 30px;
+
+    &__Left {
+      border-radius: 20px;
+      border: 7px solid $secondary-100;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(50px);
+    }
+
+    &__Right {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+  }
+
+  .casesItem__Bottom {
+    display: flex;
+    gap: 30px;
+  }
+}
