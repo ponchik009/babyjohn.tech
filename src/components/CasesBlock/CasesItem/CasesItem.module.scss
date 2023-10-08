@@ -6,7 +6,7 @@
   gap: 42px;
   justify-content: flex-start;
 
-  .casesItem__Top {
+  &__Top {
     display: flex;
     gap: 30px;
 
@@ -24,7 +24,7 @@
     }
   }
 
-  .casesItem__Bottom {
+  &__Bottom {
     display: flex;
     gap: 30px;
   }

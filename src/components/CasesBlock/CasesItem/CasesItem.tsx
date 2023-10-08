@@ -29,7 +29,7 @@ export const CasesItem: React.FC<ICaseProps> = ({
       {...props}
     >
       <ItemTitle>{titleText}</ItemTitle>
-      <DescriptionCard text={text} />
+      <DescriptionCard text={text} style={{ padding: "20px 25px" }} />
       <Icons>
         {icons.map((icon) => (
           <a href={icon.href} target="_blank">

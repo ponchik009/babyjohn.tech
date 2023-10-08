@@ -31,19 +31,21 @@ export const DescriptionCard: React.FC<IDescriptionCardProps> = ({
         <div></div>
       </div>
 
-      <div className={styles.card__titleWrapper}>
-        {titleText && <ItemTitle>{titleText}</ItemTitle>}
+      {(titleText || icons) && (
+        <div className={styles.card__titleWrapper}>
+          {titleText && <ItemTitle>{titleText}</ItemTitle>}
 
-        {icons && (
-          <div className={classNames(styles.personIcons, styles.card__icons)}>
-            {icons.map((item) => (
-              <a href={item.href} target="_blank">
-                {item.icon}
-              </a>
-            ))}
-          </div>
-        )}
-      </div>
+          {icons && (
+            <div className={classNames(styles.personIcons, styles.card__icons)}>
+              {icons.map((item) => (
+                <a href={item.href} target="_blank">
+                  {item.icon}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
       <p className={styles.card__text}>{text}</p>
     </div>
   );

@@ -14,7 +14,7 @@ export const data = [
   {
     name: "Сайт для кондитерской “Mooncakes”",
     description:
-      "Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого фактa.",
+      "Яркий лендинг, сделанный на Tilda. Включает в себя приврекательный дизайн, адаптив и анимации",
     stack: [
       <IconStackPhotoshop title="Adobe Photoshop" className="Adobe" />,
       <IconStackAdobeIllustrator title="Abobe Illustrator" className="Adobe" />,
@@ -35,9 +35,22 @@ export const data = [
   {
     name: "Сайт для кондитерской “Mooncakes”",
     description:
-      "Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого фактa.",
-    stack: [],
-    source: [],
+      "Яркий лендинг, сделанный на Tilda. Включает в себя приврекательный дизайн, адаптив и анимации",
+    stack: [
+      <IconStackPhotoshop title="Adobe Photoshop" className="Adobe" />,
+      <IconStackAdobeIllustrator title="Abobe Illustrator" className="Adobe" />,
+      <IconStackFigma title="Figma" />,
+    ],
+    source: [
+      {
+        icon: <IconSourceFigma />,
+        href: "https://www.figma.com/file/AEbLaFSvD01JNiZ8II4fzP/mooncakes-landing?type=design&node-id=0-1&mode=design&t=0KpKSMFfr10eRdq2-0",
+      },
+      {
+        icon: <IconSourceWeb />,
+        href: "https://mooncakes.store",
+      },
+    ],
     image: CaseMooncakes,
   },
 ];
