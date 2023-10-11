@@ -13,6 +13,7 @@ interface ICasesListProps
     name: string;
     description: string;
     source: { icon: JSX.Element; href: string }[];
+    participants: { href: string; title: string }[];
     stack: JSX.Element[];
     image: string;
   }[];
@@ -30,6 +31,7 @@ export const CasesList: React.FC<ICasesListProps> = ({
           icons={project.source}
           text={project.description}
           titleText={project.name}
+          participants={project.participants}
         />
       ))}
     </div>

@@ -5,6 +5,8 @@ import { ItemTitle } from "ui/ItemTitle/ItemTitle";
 import { DescriptionCard } from "ui/DescriptionCard/DescriptionCard";
 import classNames from "classnames";
 import { Icons } from "ui/Icons/Icons";
+import { Row } from "ui/Row/Row";
+import { Link } from "ui/Link/Link";
 
 interface ICaseProps
   extends React.DetailedHTMLProps<
@@ -14,6 +16,7 @@ interface ICaseProps
   titleText: string;
   text: string;
   icons: { icon: JSX.Element; href: string }[];
+  participants: { href: string; title: string }[];
 }
 
 export const CasesItem: React.FC<ICaseProps> = ({
@@ -21,6 +24,7 @@ export const CasesItem: React.FC<ICaseProps> = ({
   titleText,
   text,
   icons,
+  participants,
   ...props
 }) => {
   return (
@@ -37,6 +41,11 @@ export const CasesItem: React.FC<ICaseProps> = ({
           </a>
         ))}
       </Icons>
+      <Row>
+        {participants.map((p) => (
+          <Link href={p.href}>{p.title}</Link>
+        ))}
+      </Row>
     </div>
   );
 };

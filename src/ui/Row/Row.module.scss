@@ -1,0 +1,10 @@
+@import "~styles/index.scss";
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+
+  width: 100%;
+}

@@ -1,0 +1,45 @@
+@import "~styles/index.scss";
+
+.link {
+  color: $secondary;
+
+  font-family: $source-code-pro;
+
+  font-size: rem(20px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+  text-decoration: none;
+
+  position: relative;
+
+  margin-bottom: 30px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+
+    height: 1px;
+    width: 100%;
+
+    background-color: $secondary;
+
+    transform: scaleX(0);
+    transform-origin: 100%;
+
+    transition: transform 0.3s linear, color 0.2s linear;
+  }
+
+  &:hover {
+    color: $secondary-100;
+
+    &::before {
+      transform: scaleX(1);
+      transform-origin: 0%;
+    }
+  }
+}

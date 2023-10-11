@@ -1,7 +1,9 @@
-import React, { Children } from "react";
+import React from "react";
+import classNames from "classnames";
 
 import styles from "./Icons.module.scss";
-import classNames from "classnames";
+
+import { Row } from "ui/Row/Row";
 
 interface IIconsProps
   extends React.DetailedHTMLProps<
@@ -15,8 +17,8 @@ export const Icons: React.FC<IIconsProps> = ({
   ...props
 }) => {
   return (
-    <div className={classNames(styles.icons, className)} {...props}>
+    <Row className={classNames(styles.icons, className)} {...props}>
       {children}
-    </div>
+    </Row>
   );
 };

@@ -31,6 +31,16 @@ export const data = [
       },
     ],
     image: CaseMooncakes,
+    participants: [
+      {
+        title: "@Таня",
+        href: "https://t.me/supressiya",
+      },
+      {
+        title: "@Олег",
+        href: "https://t.me/luxorylife",
+      },
+    ],
   },
   {
     name: "Сайт для кондитерской “Mooncakes”",
@@ -52,5 +62,15 @@ export const data = [
       },
     ],
     image: CaseMooncakes,
+    participants: [
+      {
+        title: "@Таня",
+        href: "https://t.me/supressiya",
+      },
+      {
+        title: "@Олег",
+        href: "https://t.me/luxorylife",
+      },
+    ],
   },
 ];
