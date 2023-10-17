@@ -25,15 +25,33 @@ body {
   flex-direction: column;
   align-items: center;
 
-  padding: 0 $grid-horizontal;
+  // padding: 0 $grid-horizontal;
   padding-top: 80vh;
 
   background-color: $white;
 }
 
 body > * {
-  min-width: $grid-item;
   width: 100%;
+  padding: 0 $grid-horizontal;
+}
+
+@media screen and (max-width: 1919px) and (min-width: 1280px) {
+  body > * {
+    padding: 0 $grid-horizontal-lg;
+  }
+}
+
+@media screen and (max-width: 1279) and (min-width: 768px) {
+  body > * {
+    padding: 0 $grid-horizontal-md;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  body > * {
+    padding: 0 $grid-horizontal-sm;
+  }
 }
 
 svg,

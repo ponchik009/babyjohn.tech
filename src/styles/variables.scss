@@ -27,10 +27,12 @@ $black: #333333;
 $white: #fff;
 
 /* сетка */
-$grid-horizontal: 16.40625vw;
-$grid-item: calc(100vw - $grid-horizontal * 2);
+$grid-horizontal: 315px;
+$grid-horizontal-lg: 215px;
+$grid-horizontal-md: 115px;
+$grid-horizontal-sm: 15px;
+
 $grid-horizontal-minus: calc(-16.40625vw - 8px);
-$grid-width: 67, 1875vw;
 
 // шрифты
 $atomed: "Atomed";
