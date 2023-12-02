@@ -18,6 +18,9 @@
 
   z-index: 90;
 
+  transition: height 0.3s;
+  max-height: 50vh;
+
   > * {
     z-index: 90;
   }

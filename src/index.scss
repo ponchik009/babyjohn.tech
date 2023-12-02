@@ -25,7 +25,6 @@ body {
   flex-direction: column;
   align-items: center;
 
-  // padding: 0 $grid-horizontal;
   padding-top: 80vh;
 
   background-color: $white;
@@ -33,25 +32,7 @@ body {
 
 body > * {
   width: 100%;
-  padding: 0 $grid-horizontal;
-}
-
-@media screen and (max-width: 1919px) and (min-width: 1280px) {
-  body > * {
-    padding: 0 $grid-horizontal-lg;
-  }
-}
-
-@media screen and (max-width: 1279) and (min-width: 768px) {
-  body > * {
-    padding: 0 $grid-horizontal-md;
-  }
-}
-
-@media screen and (max-width: 767px) and (min-width: 320px) {
-  body > * {
-    padding: 0 $grid-horizontal-sm;
-  }
+  padding: 0 grid();
 }
 
 svg,
@@ -68,6 +49,22 @@ svg {
 
   &.React:hover {
     animation-play-state: running;
+  }
+
+  &.Programming > g > g > g > path:last-of-type {
+    animation: rotating 2s linear infinite;
+    animation-play-state: running;
+    animation-duration: 2.5s;
+
+    transform-origin: 84% 81%;
+  }
+
+  &.Programming:nth-of-type(2) > g > g > g > path:last-of-type {
+    animation-duration: 1.5s;
+  }
+
+  &.Programming:nth-of-type(3) > g > g > g > path:last-of-type {
+    animation-duration: 1s;
   }
 
   &.Typescript {
@@ -149,6 +146,20 @@ svg {
   &.Behance:hover {
     path {
       fill: #0057ff;
+    }
+  }
+
+  &.Link {
+    path {
+      fill: $secondary;
+
+      transition: all 0.2s;
+    }
+  }
+
+  &.Link:hover {
+    path {
+      fill: $primary;
     }
   }
 }

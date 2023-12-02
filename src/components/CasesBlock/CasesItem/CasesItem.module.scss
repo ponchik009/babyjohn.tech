@@ -1,6 +1,8 @@
 @import "~styles/index.scss";
 
 .casesItem {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   gap: 42px;
@@ -10,22 +12,52 @@
     display: flex;
     gap: 30px;
 
+    &__LeftWrapper {
+      border-radius: 20px;
+      border: 3px solid $secondary-10;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+    }
+
     &__Left {
+      position: relative;
+
       border-radius: 20px;
       border: 7px solid $secondary-100;
       background: rgba(255, 255, 255, 0.5);
       backdrop-filter: blur(50px);
+
+      padding: 32px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     &__Right {
       display: flex;
       flex-direction: column;
       gap: 36px;
+
+      width: 520px;
     }
   }
 
   &__Bottom {
     display: flex;
     gap: 30px;
+  }
+
+  &:last-of-type::after {
+    content: "";
+    width: grid();
+    height: 100%;
+
+    position: absolute;
+    right: calc(-1 * grid());
+    top: 0;
   }
 }

@@ -37,8 +37,8 @@ export const DescriptionCard: React.FC<IDescriptionCardProps> = ({
 
           {icons && (
             <div className={classNames(styles.personIcons, styles.card__icons)}>
-              {icons.map((item) => (
-                <a href={item.href} target="_blank">
+              {icons.map((item, index) => (
+                <a href={item.href} target="_blank" key={index}>
                   {item.icon}
                 </a>
               ))}

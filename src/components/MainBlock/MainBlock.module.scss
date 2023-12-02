@@ -5,8 +5,8 @@
 .mainBlock {
   position: fixed;
   top: 20%;
-  left: $grid-horizontal;
-  right: $grid-horizontal;
+  left: grid();
+  right: grid();
 
   display: flex;
   flex-direction: column;
@@ -215,26 +215,5 @@
 
   .alertRow:nth-of-type(2) > svg:nth-of-type(4) {
     transform: translateY(-40%);
-  }
-}
-
-@media screen and (max-width: 1919px) and (min-width: 1280px) {
-  .mainBlock {
-    left: $grid-horizontal-lg;
-    right: $grid-horizontal-lg;
-  }
-}
-
-@media screen and (max-width: 1279) and (min-width: 768px) {
-  .mainBlock {
-    left: $grid-horizontal-md;
-    right: $grid-horizontal-md;
-  }
-}
-
-@media screen and (max-width: 767px) and (min-width: 320px) {
-  .mainBlock {
-    left: $grid-horizontal-sm;
-    right: $grid-horizontal-sm;
   }
 }

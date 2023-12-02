@@ -1,6 +1,9 @@
 import React from "react";
+import SimpleBar from "simplebar-react";
+import "simplebar-react/dist/simplebar.min.css";
 
 import styles from "./CasesList.module.scss";
+
 import classNames from "classnames";
 import { CasesItem } from "../CasesItem/CasesItem";
 
@@ -25,15 +28,23 @@ export const CasesList: React.FC<ICasesListProps> = ({
   ...props
 }) => {
   return (
-    <div className={classNames(styles.casesList, className)} {...props}>
-      {cases.map((project) => (
+    <SimpleBar
+      className={classNames(styles.casesList, className)}
+      forceVisible="x"
+      autoHide={false}
+    >
+      {/* <div className={classNames(styles.casesList, className)} {...props}> */}
+      {cases.map((project, index) => (
         <CasesItem
           icons={project.source}
           text={project.description}
           titleText={project.name}
           participants={project.participants}
+          key={index}
+          mainImage={project.image}
         />
       ))}
-    </div>
+      {/* </div> */}
+    </SimpleBar>
   );
 };

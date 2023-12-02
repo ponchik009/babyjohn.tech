@@ -157,9 +157,9 @@ export const data = [
     ),
     info: "Если вы хотите стать частью нашей команды, это место для вас! (стоимость обговаривается индивидуально)",
     stack: [
-      <IconStackNeutral title="Ваш навык" />,
-      <IconStackNeutral title="Ваш навык" />,
-      <IconStackNeutral title="Ваш навык" />,
+      <IconStackNeutral title="Ваш навык" className="Programming" />,
+      <IconStackNeutral title="Ваш навык" className="Programming" />,
+      <IconStackNeutral title="Ваш навык" className="Programming" />,
     ],
     contacts: [
       {
@@ -195,9 +195,9 @@ export const data = [
     ),
     info: "Если вы хотите стать частью нашей команды, это место для вас! (стоимость обговаривается индивидуально)",
     stack: [
-      <IconStackNeutral title="Ваш навык" />,
-      <IconStackNeutral title="Ваш навык" />,
-      <IconStackNeutral title="Ваш навык" />,
+      <IconStackNeutral title="Ваш навык" className="Programming" />,
+      <IconStackNeutral title="Ваш навык" className="Programming" />,
+      <IconStackNeutral title="Ваш навык" className="Programming" />,
     ],
     contacts: [
       {
@@ -233,9 +233,9 @@ export const data = [
     ),
     info: "Если вы хотите стать частью нашей команды, это место для вас! (стоимость обговаривается индивидуально)",
     stack: [
-      <IconStackNeutral title="Ваш навык" />,
-      <IconStackNeutral title="Ваш навык" />,
-      <IconStackNeutral title="Ваш навык" />,
+      <IconStackNeutral title="Ваш навык" className="Programming" />,
+      <IconStackNeutral title="Ваш навык" className="Programming" />,
+      <IconStackNeutral title="Ваш навык" className="Programming" />,
     ],
     contacts: [
       {
@@ -271,9 +271,9 @@ export const data = [
     ),
     info: "Если вы хотите стать частью нашей команды, это место для вас! (стоимость обговаривается индивидуально)",
     stack: [
-      <IconStackNeutral title="Ваш навык" />,
-      <IconStackNeutral title="Ваш навык" />,
-      <IconStackNeutral title="Ваш навык" />,
+      <IconStackNeutral title="Ваш навык" className="Programming" />,
+      <IconStackNeutral title="Ваш навык" className="Programming" />,
+      <IconStackNeutral title="Ваш навык" className="Programming" />,
     ],
     contacts: [
       {

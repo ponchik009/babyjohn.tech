@@ -34,8 +34,8 @@ export const PersonInfo: React.FC<IPersonInfoProps> = ({ person }) => {
         </div>
 
         <div className={classNames(styles.personIcons, styles.personContacts)}>
-          {person.contacts.map((contact) => (
-            <a href={contact.href} target="_blank">
+          {person.contacts.map((contact, index) => (
+            <a href={contact.href} target="_blank" key={index}>
               {contact.icon}
             </a>
           ))}

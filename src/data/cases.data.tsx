@@ -8,6 +8,7 @@ import { ReactComponent as IconStackAdobeIllustrator } from "assets/icons/IconSt
 import { ReactComponent as IconStackFigma } from "assets/icons/IconStackFigma.svg";
 
 import { ReactComponent as IconSourceWeb } from "assets/icons/IconSourceWeb.svg";
+import { ReactComponent as IconSourceLink } from "assets/icons/IconSourceLink.svg";
 import { ReactComponent as IconSourceFigma } from "assets/icons/IconStackFigma.svg";
 
 export const data = [
@@ -16,9 +17,13 @@ export const data = [
     description:
       "Яркий лендинг, сделанный на Tilda. Включает в себя приврекательный дизайн, адаптив и анимации",
     stack: [
-      <IconStackPhotoshop title="Adobe Photoshop" className="Adobe" />,
-      <IconStackAdobeIllustrator title="Abobe Illustrator" className="Adobe" />,
-      <IconStackFigma title="Figma" />,
+      <IconStackPhotoshop title="Adobe Photoshop" className="Adobe" key={0} />,
+      <IconStackAdobeIllustrator
+        title="Abobe Illustrator"
+        className="Adobe"
+        key={1}
+      />,
+      <IconStackFigma title="Figma" key={2} />,
     ],
     source: [
       {
@@ -26,7 +31,7 @@ export const data = [
         href: "https://www.figma.com/file/AEbLaFSvD01JNiZ8II4fzP/mooncakes-landing?type=design&node-id=0-1&mode=design&t=0KpKSMFfr10eRdq2-0",
       },
       {
-        icon: <IconSourceWeb />,
+        icon: <IconSourceLink className="Link" />,
         href: "https://mooncakes.store",
       },
     ],
@@ -47,9 +52,13 @@ export const data = [
     description:
       "Яркий лендинг, сделанный на Tilda. Включает в себя приврекательный дизайн, адаптив и анимации",
     stack: [
-      <IconStackPhotoshop title="Adobe Photoshop" className="Adobe" />,
-      <IconStackAdobeIllustrator title="Abobe Illustrator" className="Adobe" />,
-      <IconStackFigma title="Figma" />,
+      <IconStackPhotoshop title="Adobe Photoshop" className="Adobe" key={0} />,
+      <IconStackAdobeIllustrator
+        title="Abobe Illustrator"
+        className="Adobe"
+        key={1}
+      />,
+      <IconStackFigma title="Figma" key={2} />,
     ],
     source: [
       {
@@ -57,7 +66,7 @@ export const data = [
         href: "https://www.figma.com/file/AEbLaFSvD01JNiZ8II4fzP/mooncakes-landing?type=design&node-id=0-1&mode=design&t=0KpKSMFfr10eRdq2-0",
       },
       {
-        icon: <IconSourceWeb />,
+        icon: <IconSourceLink className="Link" />,
         href: "https://mooncakes.store",
       },
     ],

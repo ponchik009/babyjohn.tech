@@ -1,6 +1,26 @@
 @import "~styles/index.scss";
 
 .casesList {
-  display: flex;
-  gap: 96px;
+  margin: 0 calc(-1 * grid());
+  padding: 0 grid();
+
+  :global(.simplebar-content) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 96px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  :global(.simplebar-scrollbar)::before {
+    background: $primary;
+    opacity: 1;
+  }
+
+  :global(.simplebar-track.simplebar-horizontal .simplebar-scrollbar)::before {
+    margin: 0 grid();
+  }
 }
