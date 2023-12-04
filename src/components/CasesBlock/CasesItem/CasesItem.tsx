@@ -26,7 +26,7 @@ export const CasesItem: React.FC<ICaseProps> = ({
   titleText,
   text,
   icons,
-  // participants,
+  participants,
   mainImage,
   ...props
 }) => {
@@ -39,7 +39,7 @@ export const CasesItem: React.FC<ICaseProps> = ({
           </div>
         </div>
         <div className={styles.casesItem__Top__Right}>
-          <ItemTitle>{titleText}</ItemTitle>
+          <ItemTitle className={styles.title}>{titleText}</ItemTitle>
           <DescriptionCard text={text} style={{ padding: "20px 25px" }} />
           <Icons style={{ gap: 16 }}>
             {icons.map((icon, index) => (
@@ -48,13 +48,13 @@ export const CasesItem: React.FC<ICaseProps> = ({
               </a>
             ))}
           </Icons>
-          {/* <Row>
+          <Row>
             {participants.map((p, index) => (
               <Link href={p.href} key={index}>
                 {p.title}
               </Link>
             ))}
-          </Row> */}
+          </Row>
         </div>
       </div>
       <div className={styles.casesItem__Bottom}></div>

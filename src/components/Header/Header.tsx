@@ -9,9 +9,9 @@ export const Header = () => {
     <header className={styles.header}>
       <h3 className={styles.title}>Babyjohn.tech</h3>
 
-      <button>
+      {/* <button>
         <IconBurger />
-      </button>
+      </button> */}
     </header>
   );
 };
