@@ -8,6 +8,8 @@
   gap: 42px;
   justify-content: flex-start;
 
+  user-select: none;
+
   &__Top {
     display: flex;
     gap: 30px;
@@ -38,6 +40,8 @@
 
       img {
         height: 408px;
+
+        pointer-events: none;
       }
     }
 
