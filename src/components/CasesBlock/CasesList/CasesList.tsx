@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import SimpleBar from "simplebar-react";
 import "simplebar-react/dist/simplebar.min.css";
 
@@ -27,7 +27,7 @@ export const CasesList: React.FC<ICasesListProps> = ({
   cases,
   ...props
 }) => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
+  const containerRef = useRef<HTMLDivElement>();
 
   const [isDown, setIsDown] = useState(false);
   const [startX, setStartX] = useState<number | null>(null);
@@ -70,13 +70,23 @@ export const CasesList: React.FC<ICasesListProps> = ({
       autoHide={false}
       scrollableNodeProps={{ ref: containerRef }}
       onMouseDown={(e) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        const y = e.clientY;
+        const posY = y - rect.top;
+        const height = containerRef.current?.clientHeight || Infinity;
+
+        // высота скролла и класс контейнера
+        if (height - posY <= 11) {
+          return;
+        }
+
         if (e.button === 1) {
           return;
         }
 
         if (containerRef.current) {
           setIsDown(true);
-          setStartX(e.pageX - containerRef.current?.offsetLeft);
+          setStartX(e.pageX - containerRef.current.offsetLeft);
           setScrollLeft(containerRef.current.scrollLeft);
           containerRef.current.style.cursor = "grabbing";
         }
@@ -99,13 +109,13 @@ export const CasesList: React.FC<ICasesListProps> = ({
 
         e.preventDefault();
 
-        if (containerRef.current && startX && scrollLeft !== null) {
+        if (containerRef.current && startX !== null && scrollLeft !== null) {
           const x = e.pageX - containerRef.current.offsetLeft;
           const walkX = (x - startX) * 1;
 
-          const preventScrollLeft = containerRef.current.scrollLeft;
+          const prevScrollLeft = containerRef.current.scrollLeft;
           containerRef.current.scrollLeft = scrollLeft - walkX;
-          setVelX(containerRef.current.scrollLeft - preventScrollLeft);
+          setVelX(containerRef.current.scrollLeft - prevScrollLeft);
         }
       }}
       onWheel={cancelMomentumTracking}

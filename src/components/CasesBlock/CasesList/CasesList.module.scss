@@ -4,6 +4,8 @@
   margin: 0 calc(-1 * grid());
   padding: 0 grid();
 
+  cursor: grab;
+
   :global(.simplebar-content) {
     display: flex;
     flex-direction: row;
