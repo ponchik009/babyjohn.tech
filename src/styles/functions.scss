@@ -23,20 +23,24 @@
   @return $grid-horizontal;
 }
 
-@media screen and (max-width: 1919px) and (min-width: 1280px) {
+@media screen and (max-width: 992px) {
   @function grid() {
     @return $grid-horizontal-lg;
   }
 }
 
-@media screen and (max-width: 1279) and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   @function grid() {
     @return $grid-horizontal-md;
   }
 }
 
-@media screen and (max-width: 767px) and (min-width: 320px) {
+@media screen and (max-width: 576px) {
   @function grid() {
     @return $grid-horizontal-sm;
   }
+}
+
+@function screen-width() {
+  @return calc(100vw - (100vw - 100%));
 }

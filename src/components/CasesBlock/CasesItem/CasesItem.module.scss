@@ -67,11 +67,11 @@
 
   &:last-of-type::after {
     content: "";
-    width: grid();
+    width: calc((100vw - grid()) / 2);
     height: 100%;
 
     position: absolute;
-    right: calc(-1 * grid());
+    right: calc((100vw - grid()) / -2);
     top: 0;
   }
 }

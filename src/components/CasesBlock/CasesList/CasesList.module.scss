@@ -1,8 +1,14 @@
 @import "~styles/index.scss";
 
 .casesList {
-  margin: 0 calc(-1 * grid());
-  padding: 0 grid();
+  margin: 0 calc((100vw - grid() - 40px) / -2);
+  padding: 0 calc((100vw - grid() - 40px) / 2);
+
+  // width: screen-width();
+
+  // position: absolute;
+
+  // margin-top: 110px;
 
   cursor: grab;
 
@@ -23,6 +29,6 @@
   }
 
   :global(.simplebar-track.simplebar-horizontal .simplebar-scrollbar)::before {
-    margin: 0 grid();
+    margin: 0 calc((100vw - grid() - 40px) / 2);
   }
 }
