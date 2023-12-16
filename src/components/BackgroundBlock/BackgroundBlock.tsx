@@ -6,10 +6,16 @@ import { ReactComponent as IconBgFirst } from "assets/icons/IconBgFirst.svg";
 import { ReactComponent as IconBgSecond } from "assets/icons/IconBgSecond.svg";
 import { ReactComponent as IconBgThird } from "assets/icons/IconBgThird.svg";
 
-export const BackgroundBlock = () => {
+interface IBackgroundBlockProps {
+  parentHeight?: number;
+}
+
+export const BackgroundBlock: React.FC<IBackgroundBlockProps> = ({
+  parentHeight,
+}) => {
   const bgRef = React.useRef<HTMLDivElement>(null);
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     // паралаксик
     const callback = () => {
       const top = document.documentElement.scrollTop - window.innerHeight;
@@ -26,7 +32,13 @@ export const BackgroundBlock = () => {
       }
 
       if (bgRef.current) {
-        bgRef.current.style.top = `calc(${offset}px + 90vh)`;
+        if (!parentHeight) {
+          bgRef.current.style.top = `calc(${offset}px + 90vh)`;
+        } else {
+          bgRef.current.style.top = `min(calc(${offset}px + 90vh), calc(${
+            1500 + parentHeight - bgRef.current.clientHeight
+          }px - 90vh))`;
+        }
       }
     };
 
@@ -35,7 +47,7 @@ export const BackgroundBlock = () => {
     return () => {
       window.removeEventListener("scroll", callback);
     };
-  }, []);
+  }, [parentHeight]);
 
   return (
     <div className={styles.bgBlock} ref={bgRef}>

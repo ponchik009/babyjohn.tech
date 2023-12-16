@@ -41,10 +41,14 @@ export const data = [
     ),
     info: "Это Олег, и он фронтендер. Олег любит, чтобы все было красиво, и ненавидит PHP. ",
     stack: [
-      <IconStackReact title="React" className="React" />,
-      <IconStackTypescript title="Typescript" className="Typescript" />,
-      <IconStackRedux title="Redux" />,
-      <IconStackNodejs title="NodeJS" />,
+      <IconStackReact title="React" className="React" key={"React"} />,
+      <IconStackTypescript
+        title="Typescript"
+        className="Typescript"
+        key={"Typescript"}
+      />,
+      <IconStackRedux title="Redux" key={"Redux"} />,
+      <IconStackNodejs title="NodeJS" key={"NodeJS"} />,
     ],
     contacts: [
       {
@@ -81,9 +85,17 @@ export const data = [
     ),
     info: "Это Таня, и она дизайнер. Она очень давно ищет работу. Возьмите ее на работу, она круто дизайнит. Будьте как Таня - ищите работу.",
     stack: [
-      <IconStackPhotoshop title="Adobe Photoshop" className="Adobe" />,
-      <IconStackAdobeIllustrator title="Abobe Illustrator" className="Adobe" />,
-      <IconStackFigma title="Figma" />,
+      <IconStackPhotoshop
+        title="Adobe Photoshop"
+        className="Adobe"
+        key={"Adobe Photoshop"}
+      />,
+      <IconStackAdobeIllustrator
+        title="Abobe Illustrator"
+        className="Adobe"
+        key={"Abobe Illustrator"}
+      />,
+      <IconStackFigma title="Figma" key={"Figma"} />,
     ],
     contacts: [
       {
@@ -122,7 +134,10 @@ export const data = [
       </>
     ),
     info: "Приехав из далекого Узбекистана, Камрон разрывается между желанием писать чистые функции и охмурять девушек.",
-    stack: [<IconStackJava title="Java" />, <IconStackSpring title="Spring" />],
+    stack: [
+      <IconStackJava title="Java" key={"Java"} />,
+      <IconStackSpring title="Spring" key={"Spring"} />,
+    ],
     contacts: [
       {
         icon: <IconContactVK className="VK" />,
