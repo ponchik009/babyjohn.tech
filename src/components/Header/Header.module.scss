@@ -32,5 +32,9 @@
     line-height: normal;
 
     text-transform: uppercase;
+
+    @media screen and (max-width: 520px) {
+      font-size: 32px;
+    }
   }
 }

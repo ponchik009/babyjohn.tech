@@ -26,6 +26,10 @@
     margin-top: 100px;
 
     z-index: 90;
+
+    @media screen and (max-width: 992px) {
+      margin-top: 80px;
+    }
   }
 
   .personsContainer {
@@ -39,6 +43,14 @@
 
     > * {
       z-index: 90;
+    }
+
+    @media screen and (max-width: 992px) {
+      gap: 32px;
+    }
+
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
     }
   }
 }
