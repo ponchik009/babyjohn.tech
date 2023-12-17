@@ -5,8 +5,8 @@
 .mainBlock {
   position: fixed;
   top: 20%;
-  left: calc((100vw - grid()) / 2);
-  right: calc((100vw - grid()) / 2);
+  left: calc((100vw - var(--grid)) / 2);
+  right: calc((100vw - var(--grid)) / 2);
 
   display: flex;
   flex-direction: column;
@@ -38,6 +38,14 @@
       gap: 16px;
       align-items: flex-end;
     }
+
+    @media screen and (max-width: 768px) {
+      font-size: 64px;
+    }
+
+    @media screen and (max-width: 520px) {
+      font-size: 48px;
+    }
   }
 
   .animation {
@@ -50,11 +58,43 @@
     line-height: 100%;
     align-self: center;
 
+    @media screen and (max-width: 768px) {
+      height: 80px;
+      font-size: 48px;
+    }
+
+    @media screen and (max-width: 520px) {
+      height: 60px;
+      font-size: 32px;
+    }
+
+    &:first-child > div > div {
+      @media screen and (max-width: 520px) {
+        height: 60px;
+      }
+    }
+
     & > div > div {
       padding: 0.75rem 0.75rem 0 0.75rem;
       height: 6rem;
       margin-bottom: 4rem;
       display: inline-block;
+
+      @media screen and (max-width: 520px) {
+        height: 75px;
+      }
+    }
+
+    & > div > div > svg {
+      align-self: center;
+      @media screen and (max-width: 768px) {
+        width: 48px;
+      }
+
+      @media screen and (max-width: 520px) {
+        width: 32px;
+        height: 32px;
+      }
     }
 
     & > div > div > svg:not(:first-child) {
@@ -183,11 +223,15 @@
   .alert {
     position: absolute;
     top: 200px;
-    left: 800px;
+    left: 700px;
 
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+    @media only screen and (max-width: 992px) {
+      display: none;
+    }
   }
 
   .alertRow {

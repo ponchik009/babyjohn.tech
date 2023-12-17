@@ -24,6 +24,23 @@ import { ReactComponent as IconEmojiPinchedFingers } from "assets/icons/IconEmoj
 import { ReactComponent as IconEmojiFaceWithOpenMouth } from "assets/icons/IconEmojiFaceWithOpenMouth.svg";
 
 export const MainBlock = () => {
+  const [showBlock, setShowBlock] = React.useState(true);
+
+  React.useEffect(() => {
+    const onScroll = () =>
+      setShowBlock(document.documentElement.scrollTop < window.innerHeight);
+
+    window.addEventListener("scroll", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  if (!showBlock) {
+    return null;
+  }
+
   return (
     <div className={styles.mainBlock}>
       <div className={styles.titleWraper}>

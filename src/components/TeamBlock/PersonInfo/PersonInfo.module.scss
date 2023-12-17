@@ -31,6 +31,10 @@
     svg {
       width: 64px;
       height: 64px;
+
+      @media screen and (max-width: 576px) {
+        width: 56px;
+      }
     }
   }
 
@@ -45,6 +49,10 @@
       height: 400px;
       width: fit-content;
       object-fit: contain;
+
+      @media screen and (max-width: 992px) {
+        height: 300px;
+      }
     }
 
     .personStack {

@@ -13,4 +13,8 @@
   span {
     color: $secondary;
   }
+
+  @media screen and (max-width: 992px) {
+    font-size: 28px;
+  }
 }
