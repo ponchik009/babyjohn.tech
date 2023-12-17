@@ -18,6 +18,10 @@ export const BackgroundBlock: React.FC<IBackgroundBlockProps> = ({
   React.useLayoutEffect(() => {
     // паралаксик
     const callback = () => {
+      if (!bgRef.current || !parentHeight) {
+        return;
+      }
+
       const top = document.documentElement.scrollTop - window.innerHeight;
 
       // если не выше, чем 1 / 10 страницы
@@ -31,15 +35,9 @@ export const BackgroundBlock: React.FC<IBackgroundBlockProps> = ({
         return;
       }
 
-      if (bgRef.current) {
-        if (!parentHeight) {
-          bgRef.current.style.top = `calc(${offset}px + 90vh)`;
-        } else {
-          bgRef.current.style.top = `min(calc(${offset}px + 90vh), calc(${
-            1500 + parentHeight - bgRef.current.clientHeight
-          }px - 90vh))`;
-        }
-      }
+      bgRef.current.style.top = `min(calc(${offset}px + 90vh), calc(${
+        parentHeight - bgRef.current.clientHeight
+      }px + 90vh))`;
     };
 
     window.addEventListener("scroll", callback);

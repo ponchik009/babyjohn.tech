@@ -19,28 +19,6 @@
   }
 }
 
-@function grid() {
-  @return $grid-horizontal;
-}
-
-@media screen and (max-width: 992px) {
-  @function grid() {
-    @return $grid-horizontal-lg;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  @function grid() {
-    @return $grid-horizontal-md;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  @function grid() {
-    @return $grid-horizontal-sm;
-  }
-}
-
 @function screen-width() {
   @return calc(100vw - (100vw - 100%));
 }

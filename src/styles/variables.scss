@@ -26,12 +26,6 @@ $secondary-10: #fcd5eb;
 $black: #333333;
 $white: #fff;
 
-/* сетка */
-$grid-horizontal: 1180px;
-$grid-horizontal-lg: 990px;
-$grid-horizontal-md: 760px;
-$grid-horizontal-sm: 570px;
-
 // шрифты
 $atomed: "Atomed";
 $source-code-pro: "Source Code Pro", monospace;
@@ -41,3 +35,25 @@ $montserrat: "Montserrat", sans-serif;
 $base-size-large: 18px;
 $base-size-medium: 14px;
 $base-size-small: 12px;
+
+:root {
+  --grid: 1180px;
+}
+
+@media only screen and (max-width: 1200px) {
+  :root {
+    --grid: 990px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  :root {
+    --grid: 760px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  :root {
+    --grid: 570px;
+  }
+}
