@@ -21,6 +21,10 @@
   transition: height 0.3s;
   max-height: 50vh;
 
+  @media screen and (max-width: 992px) {
+    padding: 30px;
+  }
+
   > * {
     z-index: 90;
   }
@@ -84,6 +88,15 @@
       display: flex;
       gap: 8px;
       align-items: center;
+
+      @media screen and (max-width: 520px) {
+        flex-direction: column;
+
+        & svg {
+          width: 48px;
+          height: 48px;
+        }
+      }
     }
   }
 
@@ -95,5 +108,9 @@
     font-style: normal;
     font-weight: 500;
     line-height: 143%;
+
+    @media screen and (max-width: 992px) {
+      font-size: 18px;
+    }
   }
 }

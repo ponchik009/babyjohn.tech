@@ -1,46 +1,5 @@
 @import "./variables.scss";
 
-@function rem($size) {
-  $remSize: $size / $base-size-large;
-  @return #{$remSize}rem;
-}
-
-@media only screen and (max-width: 1200px) {
-  @function rem($size) {
-    $remSize: $size / $base-size-medium;
-    @return #{$remSize}rem;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  @function rem($size) {
-    $remSize: $size / $base-size-small;
-    @return #{$remSize}rem;
-  }
-}
-
-@function grid() {
-  @return $grid-horizontal;
-}
-
-@media screen and (max-width: 992px) {
-  @function grid() {
-    @return $grid-horizontal-lg;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  @function grid() {
-    @return $grid-horizontal-md;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  @function grid() {
-    @return $grid-horizontal-sm;
-  }
-}
-
 @function screen-width() {
   @return calc(100vw - (100vw - 100%));
 }

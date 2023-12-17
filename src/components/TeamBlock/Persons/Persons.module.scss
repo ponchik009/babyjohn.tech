@@ -10,6 +10,11 @@
 
   // padding: 0 80px;
 
+  @media screen and (max-width: 576px) {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
   .personWrapper {
     border-radius: 100%;
 
@@ -17,6 +22,10 @@
     --border: 3px; /* the thickness of the border */
     --offset: 30px; /* control the movement of the border */
     --gap: 5px; /* the gap on hover */
+
+    @media screen and (max-width: 768px) {
+      --offset: 20px;
+    }
 
     cursor: pointer;
 
@@ -67,6 +76,11 @@
 
       transition: 0.8s;
 
+      @media screen and (max-width: 768px) {
+        height: 108px;
+        width: 108px;
+      }
+
       img {
         border-radius: 100%;
         width: 100%;
@@ -97,6 +111,10 @@
       visibility: hidden;
 
       text-align: center;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
 
     &:hover {
